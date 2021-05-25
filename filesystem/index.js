@@ -8,4 +8,7 @@ const fileReadCallBack = (error, data) => {
     console.log(data);
 }
 
-fs.readFile(resolve(__dirname, 'notes.txt'), 'UTF-8', fileReadCallBack);
+fs.readFileSync(resolve(__dirname, 'notes.txt'), 'UTF-8', fileReadCallBack);
+
+const data1 = fs.readFileSync(resolve(__dirname, 'notes.txt'), 'UTF-8');
+console.log(data1);
